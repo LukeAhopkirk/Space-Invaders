@@ -7,7 +7,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerClass : MonoBehaviour {
+public class Player : MonoBehaviour {
 
 	// Private variables (not visible in the Inspector panel)
 	// The speed of player movement
