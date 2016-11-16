@@ -19,6 +19,6 @@ public class Player : MonoBehaviour {
 		// degree of left or right movement
 		float movementInput = Input.GetAxis("Horizontal");
 		// Move the player object
-		transform.Translate( new Vector3(Time.deltaTime * speed * movementInput,0,0));	
+		transform.Translate( new Vector3(Time.deltaTime * speed * movementInput,0,0), Space.World);	
 	}
 }
