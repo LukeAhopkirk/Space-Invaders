@@ -1,7 +1,7 @@
 ﻿/*
 	Created by: Lech Szymanski
-				lechszym@cs.otago.ac.nz
-				Oct 30, 2015			
+				lech.szymanski@otago.ac.nz
+				COSC360: Computer Game Design
 */
 
 using UnityEngine;
