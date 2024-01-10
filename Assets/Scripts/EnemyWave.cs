@@ -9,6 +9,12 @@ public class EnemyWave : MonoBehaviour
     // Variable pointing to object prefab
     public Transform alienPrefab;
 
+    // Speed of the wave movement
+    public float speed;
+
+    // Direction of the wave movement (-ve means left, +ve is right)
+    int direction = -1;
+
     // Use this for initialization
     void Start()
     {
@@ -27,5 +33,11 @@ public class EnemyWave : MonoBehaviour
                 alien.localPosition = new Vector3((x * gapBetweenAliens) + offsetX, 0 + (y * gapBetweenAliens), 0);
             }
         }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        // Move the wave on the horizontal axis
+        transform.Translate(new Vector3(Time.deltaTime * direction * speed, 0, 0));
     }
 }
