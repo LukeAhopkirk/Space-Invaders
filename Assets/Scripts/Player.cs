@@ -50,7 +50,8 @@ public class Player : MonoBehaviour {
 
                 // Destroy the projectile game object
                 Destroy(other.gameObject);
-
+                // Report player hit to the game master
+                GameMaster.PlayerHit();
                 // Destroy self
                 Destroy(gameObject);
             }
@@ -76,7 +77,21 @@ public class Player : MonoBehaviour {
             atRightWall = false;
         }
     }
+    // When player collides with an object that is
+    // not a trigger...
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        // If the other object is tagged as "Player"...
+        if (other.gameObject.tag == "Enemy")
+        {
 
+            // Report Enemy hit to the game master
+            GameMaster.PlayerHit();
+
+            // Destroy the Player game object
+            Destroy(gameObject);
+        }
+    }
 
     // Update is called once per frame
     void Update () {
