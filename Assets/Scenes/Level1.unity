@@ -617,6 +617,7 @@ GameObject:
   - component: {fileID: 1770352354}
   - component: {fileID: 1770352357}
   - component: {fileID: 1770352356}
+  - component: {fileID: 1770352358}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -775,6 +776,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85, y: 0.6}
   m_EdgeRadius: 0
+--- !u!114 &1770352358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770352352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee4dde433de945279784d21060f874c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 3738773974415826763, guid: 81135722827b14e34b37241c95e32503, type: 3}
+  autoShootProbability: 0
+  fireCooldownTime: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
