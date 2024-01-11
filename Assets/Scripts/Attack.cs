@@ -18,7 +18,8 @@ public class Attack : MonoBehaviour
 
     // How much time is left until able to fire again 
     float fireCooldownTimeLeft = 0;
-
+    // Variable storing a reference to an audio clip
+    public AudioClip shotSound = null;
     // Per every frame...
     void Update()
     {
@@ -57,7 +58,10 @@ public class Attack : MonoBehaviour
             shot.position = transform.position;
             // Set time left until next shot
             // to the cooldown time
-            fireCooldownTimeLeft = fireCooldownTime;
+            fireCooldownTimeLeft = fireCooldownTime; if (shotSound != null)
+            {
+                AudioSource.PlayClipAtPoint(shotSound, transform.position);
+            }
         }
     }
 }
