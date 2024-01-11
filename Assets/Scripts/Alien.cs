@@ -6,6 +6,10 @@ public class Alien : MonoBehaviour
 {
     //Points the alien is worth
     public int points = 100;
+
+    //Creates a explosion prefab  game object
+    public GameObject explosionPrefab;
+
     // When enemy collides with an object with a
     // collider that is a trigger...
     void OnTriggerEnter2D(Collider2D other)
@@ -51,6 +55,7 @@ public class Alien : MonoBehaviour
                 // Report enemy hit to the game master
                 GameMaster.EnemyHit(this);
                 // Destroy self
+                Instantiate(explosionPrefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }
